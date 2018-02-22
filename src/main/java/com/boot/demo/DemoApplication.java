@@ -18,7 +18,7 @@ public class DemoApplication {
 
     @Bean
     CommandLineRunner runner(TaskService taskService) {
-        
+
         return args -> {
             taskService.save(new Task(1L, "springBootApplication1", LocalDate.now(), true));
             taskService.save(new Task(2L, "springBootApplication2", LocalDate.now(), false));
